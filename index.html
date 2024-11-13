@@ -42,10 +42,13 @@
             <ul>
                 <li><a href="#add-product">Ajouter un produit</a></li>
                 <li><a href="#edit-product">Modifier un produit</a></li>
+                <li><a href="#track-product">Suivre un produit</a></li>
+                <li><a href="#manage-orders">Gérer les commandes</a></li>
             </ul>
         </section>
         <section id="add-product" class="product-management">
             <h2>Ajouter un produit</h2>
+            <p>Ajoutez vos produits à vendre sur BearMarket en remplissant un formulaire simple. Vous pouvez ajouter des informations comme le nom, la description, le prix, et la quantité disponible.</p>
             <form action="ajouter_produit.html" method="post">
                 <label for="product-name">Nom du produit :</label>
                 <input type="text" id="product-name" name="product-name" required>
@@ -67,6 +70,7 @@
         </section>
         <section id="edit-product" class="product-management">
             <h2>Modifier un produit</h2>
+            <p>Modifiez vos produits à tout moment en mettant à jour leurs informations telles que le prix, la description ou la quantité disponible.</p>
             <form action="modifier_produit.html" method="post">
                 <label for="edit-product-id">ID du produit :</label>
                 <input type="text" id="edit-product-id" name="edit-product-id" required>
@@ -88,6 +92,16 @@
                 
                 <input type="submit" value="Modifier le produit">
             </form>
+        </section>
+        <section id="track-product" class="product-management">
+            <h2>Suivre votre produit</h2>
+            <p>Suivez l'état de vos produits et voyez leur performance, comme le nombre de vues, les ventes et plus encore.</p>
+            <!-- Ajoutez ici un lien ou un formulaire de suivi des produits -->
+        </section>
+        <section id="manage-orders" class="order-management">
+            <h2>Gérer les commandes</h2>
+            <p>Suivez toutes vos commandes et gérez leur statut, que ce soit en préparation, expédiée, ou livrée. Restez informé pour offrir un meilleur service à vos clients.</p>
+            <!-- Ajoutez ici des informations ou un lien vers un gestionnaire de commandes -->
         </section>
     </main>
     <footer>
