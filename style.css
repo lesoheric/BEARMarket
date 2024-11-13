@@ -1,4 +1,4 @@
-
+/* Styles généraux pour la page */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,58 +7,89 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    padding: 20px;
 }
 
 header {
     background-color: #333;
-    color: white;
-    padding: 20px 0;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
 
-header nav ul {
+header .logo {
+    width: 150px;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-header nav ul li {
-    display: inline;
+nav ul li {
+    display: inline-block;
     margin-right: 20px;
 }
 
-header nav ul li a {
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section principale */
+main {
+    padding: 20px;
+}
+
+/* Section 'boxed-content' pour les cadres */
+.boxed-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styles des boutons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
     text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Section 'hero' */
 .hero {
-    background-color: #4CAF50;
-    color: white;
-    padding: 50px 0;
     text-align: center;
+    padding: 50px;
+    background-color: #007bff;
+    color: white;
 }
 
-h1, h2 {
-    font-size: 2em;
-    color: #333;
+/* Styles pour les images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
 }
 
-section {
-    padding: 20px;
-    margin: 20px 0;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-}
-
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
