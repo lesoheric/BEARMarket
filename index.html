@@ -45,56 +45,34 @@
 
 
 
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
-        <div class="container d-flex justify-content-between align-items-center">
+   <!-- Header -->
+<nav class="navbar is-light shadow-lg">
+    <div class="container is-flex is-justify-content-space-between is-align-items-center">
 
-            <a class="navbar-brand text-success logo h4 align-self-center" href="index.html">
-                BEARMarket
-            </a>
+        <a class="navbar-brand has-text-success title is-4" href="index.html">
+            BEARMarket
+        </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-                <div class="flex-fill">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#template-mo-zay-hero-carousel">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#produit">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#paiement">Paiements</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contactez-nous</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- <div class="navbar align-self-center d-flex">
-                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                            <div class="input-group-text">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
-                </div> -->
-            </div>
-
+        <div class="navbar-burger" data-target="templatemo_main_nav">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
-    <!-- Close Header -->
+
+        <div id="templatemo_main_nav" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">Accueil</a>
+                <a class="navbar-item" href="#template-mo-zay-hero-carousel">About us</a>
+                <a class="navbar-item" href="#produit">Categories</a>
+                <a class="navbar-item" href="#paiement">Paiements</a>
+                <a class="navbar-item" href="#contact">Contactez-nous</a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<!-- Close Header -->
+
 
    <!-- Start Banner Hero -->
 <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -515,6 +493,33 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+    
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+    
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+    
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+    
+                    });
+                });
+            }
+        });
+    </script>
+    
     <!-- End Script -->
 </body>
 
