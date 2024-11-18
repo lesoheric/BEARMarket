@@ -12,6 +12,9 @@
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.19"
+  },
+  "dependencies": {
+    "bulma": "^1.0.2"
   }
 }
