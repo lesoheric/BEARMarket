@@ -503,6 +503,28 @@
     </script>
     
     <!-- End Script -->
+    <script>
+        const themeSelector = document.getElementById('theme-selector');
+      
+        themeSelector.addEventListener('change', (event) => {
+          const selectedTheme = event.target.value;
+          document.documentElement.className = selectedTheme;
+        });
+      
+        // Conservez le thème sélectionné dans le stockage local
+        document.addEventListener('DOMContentLoaded', () => {
+          const savedTheme = localStorage.getItem('theme') || 'light';
+          themeSelector.value = savedTheme;
+          document.documentElement.className = savedTheme;
+        });
+      
+        themeSelector.addEventListener('change', (event) => {
+          const selectedTheme = event.target.value;
+          document.documentElement.className = selectedTheme;
+          localStorage.setItem('theme', selectedTheme);
+        });
+      </script>
+      
 </body>
 
 </html>

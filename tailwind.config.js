@@ -1,9 +1,18 @@
+/* tailwind.config.js */
 module.exports = {
-  content: [
-    "./src/**/*.{html,js}",
-  ],
   theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+    extend: {
+      colors: {
+        dark: {
+          background: '#1a202c',
+          text: '#a0aec0',
+        },
+        light: {
+          background: '#ffffff',
+          text: '#1a202c',
+        },
+        // Ajoutez d'autres thèmes ici
+      }
+    }
+  }
+}
