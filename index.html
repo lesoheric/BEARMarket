@@ -248,7 +248,7 @@
                 </div>
             </div>
             <!-- Mode de paiement 6 -->
-            <div class="column is-full-mobile is-one-third-tablet mb-4">
+            <div class="bg-background text-text column is-full-mobile is-one-third-tablet mb-4">
                 <div class="card h-full">
                     <div class="card-body has-text-centered">
                         <figure class="image is-128x128 mx-auto">
@@ -503,28 +503,28 @@
     </script>
     
     <!-- End Script -->
-    <script>
-        const themeSelector = document.getElementById('theme-selector');
-      
-        themeSelector.addEventListener('change', (event) => {
-          const selectedTheme = event.target.value;
-          document.documentElement.className = selectedTheme;
-        });
-      
-        // Conservez le thème sélectionné dans le stockage local
-        document.addEventListener('DOMContentLoaded', () => {
-          const savedTheme = localStorage.getItem('theme') || 'light';
-          themeSelector.value = savedTheme;
-          document.documentElement.className = savedTheme;
-        });
-      
-        themeSelector.addEventListener('change', (event) => {
-          const selectedTheme = event.target.value;
-          document.documentElement.className = selectedTheme;
-          localStorage.setItem('theme', selectedTheme);
-        });
-      </script>
-      
+     <script>
+  const themeSelector = document.getElementById('theme-selector');
+
+  themeSelector.addEventListener('change', (event) => {
+    const selectedTheme = event.target.value;
+    document.documentElement.className = selectedTheme;
+  });
+
+  // Conservez le thème sélectionné dans le stockage local
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    themeSelector.value = savedTheme;
+    document.documentElement.className = savedTheme;
+  });
+
+  themeSelector.addEventListener('change', (event) => {
+    const selectedTheme = event.target.value;
+    document.documentElement.className = selectedTheme;
+    localStorage.setItem('theme', selectedTheme);
+  });
+</script>
+
 </body>
 
 </html>
